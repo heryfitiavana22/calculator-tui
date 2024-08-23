@@ -1,5 +1,5 @@
 # calculator-tui
-A simple calculator in terminal user interface (tui) with rust
+A simple two-input calculator in the terminal user interface (tui) with rust
 
 ### Demo
 ![demo](./demo.gif)
