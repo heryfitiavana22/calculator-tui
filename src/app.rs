@@ -168,4 +168,20 @@ impl App {
             }
         }
     }
+
+    pub fn get_operand1(&self) -> Option<String> {
+        return self.operand1.clone();
+    }
+
+    pub fn get_operand2(&self) -> Option<String> {
+        return self.operand2.clone();
+    }
+
+    pub fn get_operator(&self) -> Option<char> {
+        return self.operator.clone();
+    }
+
+    pub fn get_result(&self) -> Option<f64> {
+        return self.result.clone();
+    }
 }

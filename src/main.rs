@@ -1,6 +1,7 @@
 use std::io::Result;
 
 mod app;
+mod test;
 mod tui;
 
 fn main() -> Result<()> {
