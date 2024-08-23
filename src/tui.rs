@@ -132,7 +132,6 @@ impl Tui {
             f.render_widget(button_add, row4[3]);
 
             let bottom_instruction = p_center("Use arrow keys (left, right, up, down) to move and press Enter to select");
-            //Use the arrow keys (left, right, up, down) to move, and press Enter to select.
             f.render_widget(bottom_instruction, main_chunks[2]);
         });
     }
