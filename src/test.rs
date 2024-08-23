@@ -1,10 +1,9 @@
+#[cfg(test)]
 use ratatui::crossterm::event::KeyCode;
 
-use crate::app::App;
-
-#[cfg(test)]
 #[test]
 fn test_set_operand() {
+    use crate::app::App;
     let mut app = App::new();
     app.set_operand(5.0);
     assert_eq!(app.get_operand1(), Some("5".to_string()));
@@ -16,6 +15,8 @@ fn test_set_operand() {
 
 #[test]
 fn test_set_operator() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operator('+');
     assert_eq!(app.get_operator(), Some('+'));
@@ -26,6 +27,8 @@ fn test_set_operator() {
 
 #[test]
 fn test_calculate_addition() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operand(5.0);
     app.set_operator('+');
@@ -36,6 +39,8 @@ fn test_calculate_addition() {
 
 #[test]
 fn test_calculate_subtraction() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operand(5.0);
     app.set_operator('-');
@@ -46,6 +51,8 @@ fn test_calculate_subtraction() {
 
 #[test]
 fn test_calculate_multiplication() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operand(5.0);
     app.set_operator('*');
@@ -56,6 +63,8 @@ fn test_calculate_multiplication() {
 
 #[test]
 fn test_calculate_division() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operand(9.0);
     app.set_operator('/');
@@ -66,6 +75,8 @@ fn test_calculate_division() {
 
 #[test]
 fn test_reset() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.set_operand(9.0);
     app.set_operator('*');
@@ -81,6 +92,8 @@ fn test_reset() {
 
 #[test]
 fn test_button_navigation() {
+    use crate::app::App;
+
     let mut app = App::new();
     app.move_selected_button(KeyCode::Down);
     assert_eq!(app.get_selected_button(), Some((1, 0)));
@@ -94,6 +107,8 @@ fn test_button_navigation() {
 
 #[test]
 fn test_button_click() {
+    use crate::app::App;
+    
     let mut app = App::new();
     app.move_selected_button(KeyCode::Down); // Move to "7"
     app.click_selected_button();
